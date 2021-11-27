@@ -52,7 +52,7 @@ export default function Basics() {
       step: 1,
       range: { min: 0, max: 100 },
     });
-  },[]);
+  }, []);
   return (
     <div className="section section-basic" id="basic-elements">
       <img
@@ -124,7 +124,7 @@ export default function Basics() {
           <Col md="8">
             <Button color="link">Default</Button>
             <Button className="btn-link" color="primary">
-              Primary
+              dfdfdf
             </Button>
             <Button className="btn-link" color="info">
               Info

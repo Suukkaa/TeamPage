@@ -35,33 +35,36 @@ import Signup from "../views/IndexSections/Signup.js";
 import Examples from "../views/IndexSections/Examples.js";
 import Download from "../views/IndexSections/Download.js";
 
-export default function Index() {
+export default function Index({ history }) {
   React.useEffect(() => {
     document.body.classList.toggle("index-page");
     // Specify how to clean up after this effect:
     return function cleanup() {
       document.body.classList.toggle("index-page");
     };
-  },[]);
+  }, []);
   return (
     <>
       <IndexNavbar />
       <div className="wrapper">
         <PageHeader />
-        {<div className="main">
-          <Basics />
-          <Navbars />
-          <Tabs />
-          <Pagination />
-          <Notifications />
-          <Typography />
-          <JavaScript />
-          <NucleoIcons />
-          <Signup />
-          <Examples />
-          <Download />
-        </div>}
-        <Footer /> 
+        <PageHeader />
+        {
+          <div className="main">
+            <Basics />
+            <Navbars />
+            <Tabs />
+            <Pagination />
+            <Notifications />
+            <Typography />
+            <JavaScript />
+            <NucleoIcons />
+            <Signup />
+            <Examples />
+            <Download />
+          </div>
+        }
+        <Footer />
       </div>
     </>
   );
